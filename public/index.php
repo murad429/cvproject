@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+</head>
+<body>
+<h1>My first PHP page</h1>
+
 <?php
 
 use App\Kernel;
@@ -25,3 +33,7 @@ $request = Request::createFromGlobals();
 $response = $kernel->handle($request);
 $response->send();
 $kernel->terminate($request, $response);
+
+?>
+</body>
+</html>
