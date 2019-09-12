@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Login Page</title>
-</head>
-<body>
-<h1>My first PHP page</h1>
-<form action="/src/Controler/redirect.php" method ="GET">
-    <input type="submit" value="Submit">
-</form>>
-
 <?php
 
 use App\Kernel;
@@ -37,6 +26,3 @@ $response = $kernel->handle($request);
 $response->send();
 $kernel->terminate($request, $response);
 
-?>
-</body>
-</html>
