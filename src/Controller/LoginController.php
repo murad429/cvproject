@@ -19,7 +19,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 class LoginController extends AbstractController {
     /**
-     * @Route("/user/login")
+     * @Route("/user/login", name="logincontroller")
 
      */
 public function newAction(Request $request){
