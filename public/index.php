@@ -5,6 +5,9 @@
 </head>
 <body>
 <h1>My first PHP page</h1>
+<form action="/src/Controler/redirect.php" method ="GET">
+    <input type="submit" value="Submit">
+</form>>
 
 <?php
 
