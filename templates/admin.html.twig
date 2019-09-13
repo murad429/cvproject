@@ -34,17 +34,20 @@
             <th>Title</th>
             <th>Description</th>
             <th>Url</th>
+            <th>Options</th>
         </tr>
+        {% for movie in movies %}
         <tr>
-            <td>1</td>
-            <td>Become a legend person</td>
-            <td>Do every thing in life e.g study, enjoyment, practical etc..</td>
-            <td>legend.person@gmail.com</td>
+            <td>{{ movie.id}}</td>
+            <td>{{ movie.title}}</td>
+            <td>{{ movie.description}}</td>
+            <td>{{ movie.url}}</td>
             <td class="link"><!-- Your missing this -->
-                <a class="editLink" href="delete.php">Delete</a>
+                <a class="editLink" href="/user/delete/{{ movie.id }}">Delete</a>
                 <a class="editLink" href="edit.php">Edit</a>
             </td><!-- and this -->
         </tr>
+        {% endfor %}
 
     </table>
 </div>
@@ -53,5 +56,6 @@
 </div>
 {% endblock %}
 {% block javascripts %}{% endblock %}
+
 </body>
 </html>
