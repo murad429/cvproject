@@ -1,8 +1,5 @@
 //===== Cookies Plugin=====   //
 
-//===== Cookies Plugin=====   //
-
-
 let already= document.cookie.split(';');
 console.log(already);
 already.forEach(function(cooky) {
@@ -13,7 +10,9 @@ already.forEach(function(cooky) {
     if (key_value[1].trim() =="true") {
         console.log(key_value[0].trim());
         console.log(key_value[1]);
-        document.getElementById(key_value[0].trim()).click();
+        if(document.getElementById(key_value[0].trim())!=null) {
+            document.getElementById(key_value[0].trim()).click();
+        }
     }
 });
 
