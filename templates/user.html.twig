@@ -6,6 +6,7 @@
     {% block stylesheets %}
         <link  rel="stylesheet" type="text/css" media="screen" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
     {% endblock %}
+
 </head>
 <body>
 <div class ="container">
@@ -30,13 +31,14 @@
         <div class="container">
             <div class="form-group row ">
 
-                <div class="col ">
+                <div  class="col ">
                     <table class="table table-striped">
                         <tr>
                             <th>id</th>
                             <th>Title</th>
                             <th>Description</th>
                             <th>Url</th>
+                            <th>Visited<th>
                         </tr>
                         {% for movie in movies %}
                             <tr>
@@ -44,7 +46,7 @@
                                 <td>{{ movie.title}}</td>
                                 <td>{{ movie.description}}</td>
                                 <td>{{ movie.url}}</td>
-
+                                <td ><input type="checkbox" value={{ movie.id}} id={{ movie.url }} onChange="set_check(this)" /></td>
                             </tr>
                         {% endfor %}
 
@@ -54,7 +56,10 @@
         </div>
     </div>
 {% endblock %}
-{% block javascripts %}{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('js/jquery-1.7.1.min.js') }}"></script>
+    <script src="{{ asset('js/checkbox.js') }}"></script>
+    {% endblock %}
 </body>
 </html>
 
