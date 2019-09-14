@@ -34,7 +34,7 @@ public function newAction(Request $request){
     if ($form->isSubmitted() && $form->isValid()) {
         $login_data =$form->getData();
         if($login_data->getUserName()=='Murad' && $login_data->getPassword()=='123'){
-            return new Response("User photo is successfully uploaded.");
+            return $this->redirectToRoute("usercontrol");
         }elseif($login_data->getUserName()=='Admin' && $login_data->getPassword()=='786'){
             return $this->redirectToRoute("admincontroller");
         }else{

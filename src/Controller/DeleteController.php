@@ -5,7 +5,6 @@ namespace App\Controller;
 use App\Entity\Video;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 
 class DeleteController extends AbstractController

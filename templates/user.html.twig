@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome user{% endblock %}</title>
+    {% block stylesheets %}
+        <link  rel="stylesheet" type="text/css" media="screen" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    {% endblock %}
+</head>
+<body>
+<div class ="container">
+{{ search }}
+</div>
+{% block body %}
+<div class="jumbotron d-flex  align-items-center">
+    <div class="container ">
+        <div class="form-group row ">
+
+            <div class="col-sm-12 ">
+    {%- block form -%}
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+    {%- endblock form -%}
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="jumbotron d-flex  align-items-center">
+        <div class="container">
+            <div class="form-group row ">
+
+                <div class="col ">
+                    <table class="table table-striped">
+                        <tr>
+                            <th>id</th>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Url</th>
+                        </tr>
+                        {% for movie in movies %}
+                            <tr>
+                                <td>{{ movie.id}}</td>
+                                <td>{{ movie.title}}</td>
+                                <td>{{ movie.description}}</td>
+                                <td>{{ movie.url}}</td>
+
+                            </tr>
+                        {% endfor %}
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block javascripts %}{% endblock %}
+</body>
+</html>
+
