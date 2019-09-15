@@ -15,3 +15,7 @@ Installation steps:
 1. edit ".env.local" file with the DB connection
 1. create the database: "php bin/console doctrine:database:create"
 1. update the database: "php bin/console doctrine:migrations:migrate"
+
+User : Password= {Murad:123} and {Admin:786}
+URL: localhost/user/login
+
