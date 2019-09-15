@@ -36,13 +36,13 @@ public function searchAction(Request $request){
         return $this->render('user.html.twig',array(
             'form'=>$form->createView(),
             'movies'=>$movies,
-            'search'=>"",
+
         ));
     }else {
         return $this->render('user.html.twig', array(
             'form' => $form->createView(),
             'movies' =>[],
-            'search'=>"",
+
         ));
 
     }

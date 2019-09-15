@@ -8,11 +8,11 @@
     {% endblock %}
 
 </head>
+<div class="topcorner" ><a style='float:none' href="/user/logout">logout</a></div>
 <body>
-<div class ="container">
-{{ search }}
-</div>
+
 {% block body %}
+
 <div class="jumbotron d-flex  align-items-center">
     <div class="container ">
         <div class="form-group row ">
@@ -31,7 +31,7 @@
         <div class="container">
             <div class="form-group row ">
 
-                <div  class="col ">
+                <div  class="col-sm-12 ">
                     <table class="table table-striped">
                         <tr>
                             <th>id</th>
@@ -39,6 +39,7 @@
                             <th>Description</th>
                             <th>Url</th>
                             <th>Viewed<th>
+                            <th>Favourite<th>
                         </tr>
                         {% for movie in movies %}
                             <tr>
@@ -47,6 +48,7 @@
                                 <td>{{ movie.description}}</td>
                                 <td>{{ movie.url}}</td>
                                 <td ><input type="checkbox" value={{ movie.id}} id={{ movie.url }} onChange="set_check(this)" /></td>
+                                <td ><input type="radio" id={{ movie.id}} value={{ movie.url }} onChange="set_check(this)" /></td>
                             </tr>
                         {% endfor %}
 

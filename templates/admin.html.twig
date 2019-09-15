@@ -5,8 +5,10 @@
     <title>{% block title %}Welcome Admin!{% endblock %}</title>
     {% block stylesheets %}
         <link  rel="stylesheet" type="text/css" media="screen" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+
     {% endblock %}
 </head>
+<div class="topcorner" ><a style='float:none' href="/user/logout">logout</a></div>
 <body>
 {% block body %}
 <div class="jumbotron d-flex  align-items-center">
@@ -44,7 +46,7 @@
             <td>{{ movie.url}}</td>
             <td class="link"><!-- Your missing this -->
                 <a class="editLink" href="/user/delete/{{ movie.id }}">Delete</a>
-                <a class="editLink" href="edit.php">Edit</a>
+                <a class="editLink" href="/user/edit/{{ movie.id }}">Edit</a>
             </td><!-- and this -->
         </tr>
         {% endfor %}
